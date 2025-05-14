@@ -6,13 +6,27 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
+  theme:{
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+        gold: '#FFD700',
+        bronze: '#CD7F32',
+        silver: '#C0C0C0'
+      }
     },
   },
-  plugins: [],
+   daisyui: {
+    themes: [{
+      dark: {
+        "primary": "#FFD700",
+        "secondary": "#C0C0C0",
+        "accent": "#CD7F32",
+        "neutral": "#2a323c",
+        "base-100": "#1d232a",
+      }
+    }],
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui')],
 } satisfies Config;

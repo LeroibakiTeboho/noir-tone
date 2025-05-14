@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Fender Stratocaster Electric Guitar",
+    "price": 1199.99,
+    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
+    "category": "Guitars",
+    "rating": 4.8,
+    "images": [
+      "/images/products/saxophone-2687577_640.jpg",
+      "/images/products/saxophone-2687577_640.jpg"
+    ],
+    "specs": {
+      "material": "Alder body, Maple neck",
+      "dimensions": "39 x 13 x 2.5 inches",
+      "colorOptions": ["Sunburst", "Black", "White"]
+    },
+    "slug": "fender-stratocaster-electric-guitar",
+    "sku": "FEN-STRAT-001",
+    "inStock": true
+  },
+  {
+    "id": "2",
+    "name": "Fender Stratocaster Electric Guitar",
+    "price": 1199.99,
+    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
+    "category": "Guitars",
+    "rating": 4.8,
+    "images": [
+      "/images/products/musical-4009232_640.png",
+      "/images/products/musical-4009232_640.png"
+    ],
+    "specs": {
+      "material": "Alder body, Maple neck",
+      "dimensions": "39 x 13 x 2.5 inches",
+      "colorOptions": ["Sunburst", "Black", "White"]
+    },
+    "slug": "fender-stratocaster-electric-guitar",
+    "sku": "FEN-STRAT-001",
+    "inStock": true
+  },
+  {
+    "id": "3",
+    "name": "Fender Stratocaster Electric Guitar",
+    "price": 1199.99,
+    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
+    "category": "Guitars",
+    "rating": 4.8,
+    "images": [
+      "/images/products/saxophone-2687577_640.jpg",
+      "/images/products/fender-strat-2.jpg"
+    ],
+    "specs": {
+      "material": "Alder body, Maple neck",
+      "dimensions": "39 x 13 x 2.5 inches",
+      "colorOptions": ["Sunburst", "Black", "White"]
+    },
+    "slug": "fender-stratocaster-electric-guitar",
+    "sku": "FEN-STRAT-001",
+    "inStock": true
+  },
+  {
+    "id": "4",
+    "name": "Fender Stratocaster Electric Guitar",
+    "price": 1199.99,
+    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
+    "category": "Guitars",
+    "rating": 4.8,
+    "images": [
+      "/images/products/fender-strat-1.jpg",
+      "/images/products/fender-strat-2.jpg"
+    ],
+    "specs": {
+      "material": "Alder body, Maple neck",
+      "dimensions": "39 x 13 x 2.5 inches",
+      "colorOptions": ["Sunburst", "Black", "White"]
+    },
+    "slug": "fender-stratocaster-electric-guitar",
+    "sku": "FEN-STRAT-001",
+    "inStock": true
+  }
+]
