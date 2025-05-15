@@ -38,7 +38,9 @@ export default function Header() {
             Shop
           </Link>
 
-          
+           <Link href="/orders" className="text-silver hover:text-gold">
+    Orders
+  </Link>
           
           
           <div className="indicator">

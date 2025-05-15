@@ -1,12 +1,20 @@
 // contexts/CartContext.tsx
 'use client';
 
-import { createContext, ReactNode, useContext, useReducer } from 'react';
+import { createContext, ReactNode, useContext, useReducer, useEffect } from 'react';
 import type { Product } from '@/types/product';
 
 type CartItem = {
   product: Product;
   quantity: number;
+};
+
+type Order = {
+  id: string;
+  date: string;
+  items: CartItem[];
+  total: number;
+  status: 'processing' | 'shipped' | 'delivered';
 };
 
 type CheckoutState = {
@@ -18,6 +26,7 @@ type CheckoutState = {
 type CartState = {
   items: CartItem[];
   checkout: CheckoutState;
+  orders: Order[];
 };
 
 type Action = 
@@ -25,8 +34,9 @@ type Action =
   | { type: 'REMOVE_ITEM'; payload: string }
   | { type: 'UPDATE_QUANTITY'; payload: { id: string; quantity: number } }
   | { type: 'CHECKOUT_START' }
-  | { type: 'CHECKOUT_SUCCESS' }
-  | { type: 'CHECKOUT_ERROR'; payload: string };
+  | { type: 'CHECKOUT_SUCCESS'; payload: Order }
+  | { type: 'CHECKOUT_ERROR'; payload: string }
+  | { type: 'LOAD_STATE'; payload: CartState };
 
 type CartContextType = {
   state: CartState;
@@ -42,7 +52,8 @@ const initialState: CartState = {
     loading: false,
     error: null,
     success: false
-  }
+  },
+  orders: []
 };
 
 function cartReducer(state: CartState, action: Action): CartState {
@@ -105,7 +116,8 @@ function cartReducer(state: CartState, action: Action): CartState {
           loading: false,
           error: null,
           success: true
-        }
+        },
+        orders: [...state.orders, action.payload]
       };
 
     case 'CHECKOUT_ERROR':
@@ -118,13 +130,28 @@ function cartReducer(state: CartState, action: Action): CartState {
         }
       };
 
+    case 'LOAD_STATE':
+      return action.payload;
+
     default:
       return state;
   }
 }
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [state, dispatch] = useReducer(cartReducer, initialState);
+  const [state, dispatch] = useReducer(cartReducer, initialState, () => {
+    // Load state from localStorage on initial load
+    if (typeof window !== 'undefined') {
+      const savedState = localStorage.getItem('cartState');
+      return savedState ? JSON.parse(savedState) : initialState;
+    }
+    return initialState;
+  });
+
+  // Save state to localStorage on every change
+  useEffect(() => {
+    localStorage.setItem('cartState', JSON.stringify(state));
+  }, [state]);
 
   const processCheckout = async () => {
     try {
@@ -133,8 +160,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Add real payment processing here
-      dispatch({ type: 'CHECKOUT_SUCCESS' });
+      // Create order
+      const newOrder: Order = {
+        id: `ORD-${Date.now()}`,
+        date: new Date().toISOString(),
+        items: state.items,
+        total: state.items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0),
+        status: 'processing'
+      };
+
+      dispatch({ type: 'CHECKOUT_SUCCESS', payload: newOrder });
     } catch (error) {
       dispatch({ 
         type: 'CHECKOUT_ERROR', 
