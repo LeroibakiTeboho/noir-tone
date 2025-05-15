@@ -1,8 +1,9 @@
 // components/ui/ProductCard.tsx
-import Image from 'next/image';
-import Link from 'next/link';
-import type { Product } from '@/types/product';
-import AddToCartButton from './AddToCartButton';
+import Image from "next/image";
+import Link from "next/link";
+import type { Product } from "@/types/product";
+import AddToCartButton from "./AddToCartButton";
+import WishlistButton from "./WishlistButton";
 
 interface ProductCardProps {
   product: Product;
@@ -11,15 +12,18 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow h-full">
-      <figure className="px-4 pt-4">
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          width={400}
-          height={300}
-          className="rounded-xl h-48 object-cover"
-        />
-      </figure>
+      <div className="relative">
+        <WishlistButton productId={product.id} />
+        <figure className="px-4 pt-4">
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            width={400}
+            height={300}
+            className="rounded-xl h-48 object-cover"
+          />
+        </figure>
+      </div>
       <div className="card-body">
         <h3 className="card-title text-gold">{product.name}</h3>
         <div className="badge badge-secondary">${product.price}</div>

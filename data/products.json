@@ -1,82 +1,257 @@
 [
   {
     "id": "1",
-    "name": "Fender Stratocaster Electric Guitar",
-    "price": 1199.99,
-    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
+    "name": "Yamaha Pacifica 112V",
+    "price": 299.99,
+    "description": "A versatile electric guitar with smooth playability and excellent tonal range for beginners and intermediate players.",
     "category": "Guitars",
-    "rating": 4.8,
-    "images": [
-      "/images/products/saxophone-2687577_640.jpg",
-      "/images/products/musical-4009232_640.png"
-    ],
+    "rating": 4.5,
+    "images": ["/images/products/01.png", "/images/products/02.png"],
     "specs": {
       "material": "Alder body, Maple neck",
-      "dimensions": "39 x 13 x 2.5 inches",
-      "colorOptions": ["Sunburst", "Black", "White"]
+      "dimensions": "38.6 x 12.8 x 2.2 inches",
+      "colorOptions": ["Red Metallic", "Natural", "Black"]
     },
-    "slug": "fender-stratocaster-electric-guitar",
-    "sku": "FEN-STRAT-001",
+    "slug": "yamaha-pacifica-112v",
+    "sku": "YAM-PAC-112V",
     "inStock": true
   },
   {
     "id": "2",
-    "name": "Fender Stratocaster Electric Guitar",
-    "price": 1199.99,
-    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
-    "category": "Guitars",
-    "rating": 4.8,
-    "images": [
-      "/images/products/01.png",
-      "/images/products/saxophone-2687577_640.jpg"
-    ],
+    "name": "Roland TD-1DMK V-Drums",
+    "price": 699.00,
+    "description": "A compact and responsive electronic drum kit with dual-mesh pads, ideal for quiet practice and realistic play.",
+    "category": "Drums",
+    "rating": 4.7,
+    "images": ["/images/products/03.png", "/images/products/04.png"],
     "specs": {
-      "material": "Alder body, Maple neck",
-      "dimensions": "39 x 13 x 2.5 inches",
-      "colorOptions": ["Sunburst", "Black", "White"]
+      "material": "Plastic frame, Mesh heads",
+      "dimensions": "47 x 33 x 43 inches",
+      "colorOptions": ["Black"]
     },
-    "slug": "fender-stratocaster-electric-guitar",
-    "sku": "FEN-STRAT-001",
+    "slug": "roland-td-1dmk-v-drums",
+    "sku": "ROL-TD1-DMK",
     "inStock": true
   },
   {
     "id": "3",
-    "name": "Fender Stratocaster Electric Guitar",
-    "price": 1199.99,
-    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
-    "category": "Guitars",
-    "rating": 4.8,
-    "images": [
-      "/images/products/saxophone-2687577_640.jpg",
-      "/images/products/fender-strat-2.jpg"
-    ],
+    "name": "Casio CT-X700 Keyboard",
+    "price": 179.99,
+    "description": "Portable 61-key keyboard with built-in speakers and a wide range of tones and rhythms for learning and performance.",
+    "category": "Keyboards",
+    "rating": 4.3,
+    "images": ["/images/products/05.png", "/images/products/06.png"],
     "specs": {
-      "material": "Alder body, Maple neck",
-      "dimensions": "39 x 13 x 2.5 inches",
-      "colorOptions": ["Sunburst", "Black", "White"]
+      "material": "Plastic",
+      "dimensions": "37.2 x 16 x 5.3 inches",
+      "colorOptions": ["Black"]
     },
-    "slug": "fender-stratocaster-electric-guitar",
-    "sku": "FEN-STRAT-001",
+    "slug": "casio-ctx700-keyboard",
+    "sku": "CAS-CTX-700",
     "inStock": true
   },
   {
     "id": "4",
-    "name": "Fender Stratocaster Electric Guitar",
-    "price": 1199.99,
-    "description": "A classic Fender Stratocaster electric guitar with a maple neck and iconic tones, ideal for blues and rock musicians.",
-    "category": "Guitars",
-    "rating": 4.8,
-    "images": [
-      "/images/products/fender-strat-1.jpg",
-      "/images/products/fender-strat-2.jpg"
-    ],
+    "name": "Ibanez SR300E Bass Guitar",
+    "price": 349.99,
+    "description": "A modern 4-string electric bass with active electronics and smooth neck for funk, rock, and jazz basslines.",
+    "category": "Bass Guitars",
+    "rating": 4.6,
+    "images": ["/images/products/07.png", "/images/products/08.png"],
     "specs": {
-      "material": "Alder body, Maple neck",
-      "dimensions": "39 x 13 x 2.5 inches",
-      "colorOptions": ["Sunburst", "Black", "White"]
+      "material": "Mahogany body, Maple neck",
+      "dimensions": "45 x 15 x 2.8 inches",
+      "colorOptions": ["Navy Metallic", "Root Beer", "Pearl White"]
     },
-    "slug": "fender-stratocaster-electric-guitar",
-    "sku": "FEN-STRAT-001",
+    "slug": "ibanez-sr300e-bass-guitar",
+    "sku": "IBA-SR300E",
+    "inStock": true
+  },
+  {
+    "id": "5",
+    "name": "Martin LX1 Little Martin",
+    "price": 499.00,
+    "description": "Compact acoustic guitar with solid Sitka spruce top, great for travel or beginners with a warm tone.",
+    "category": "Acoustic Guitars",
+    "rating": 4.7,
+    "images": ["/images/products/09.png", "/images/products/10.png"],
+    "specs": {
+      "material": "Spruce top, Mahogany laminate back",
+      "dimensions": "34 x 13 x 3.5 inches",
+      "colorOptions": ["Natural"]
+    },
+    "slug": "martin-lx1-little-martin",
+    "sku": "MAR-LX1",
+    "inStock": true
+  },
+  {
+    "id": "6",
+    "name": "Alesis Nitro Mesh Kit",
+    "price": 379.99,
+    "description": "Affordable and quiet electronic drum set with mesh heads and customizable kits for home practice.",
+    "category": "Drums",
+    "rating": 4.4,
+    "images": ["/images/products/11.png", "/images/products/12.png"],
+    "specs": {
+      "material": "Rubber, Mesh",
+      "dimensions": "45 x 28 x 40 inches",
+      "colorOptions": ["Black"]
+    },
+    "slug": "alesis-nitro-mesh-kit",
+    "sku": "ALE-NITRO-MESH",
+    "inStock": true
+  },
+  {
+    "id": "7",
+    "name": "Yamaha P-45 Digital Piano",
+    "price": 499.99,
+    "description": "88-key weighted digital piano with realistic key action and built-in speakers, perfect for beginners.",
+    "category": "Keyboards",
+    "rating": 4.6,
+    "images": ["/images/products/13.png", "/images/products/14.png"],
+    "specs": {
+      "material": "Plastic frame",
+      "dimensions": "52.2 x 11.6 x 6 inches",
+      "colorOptions": ["Black"]
+    },
+    "slug": "yamaha-p45-digital-piano",
+    "sku": "YAM-P45",
+    "inStock": true
+  },
+  {
+    "id": "8",
+    "name": "Korg Volca Beats",
+    "price": 159.99,
+    "description": "Compact analog rhythm machine offering punchy drum sounds and sequencer for beat makers.",
+    "category": "Drum Machines",
+    "rating": 4.2,
+    "images": ["/images/products/15.png", "/images/products/16.png"],
+    "specs": {
+      "material": "Plastic with metal top panel",
+      "dimensions": "7.6 x 4.5 x 1.8 inches",
+      "colorOptions": ["Black/Gold"]
+    },
+    "slug": "korg-volca-beats",
+    "sku": "KORG-VOLCA-BEATS",
+    "inStock": true
+  },
+  {
+    "id": "9",
+    "name": "Kala KA-15S Soprano Ukulele",
+    "price": 59.99,
+    "description": "Beginner-friendly soprano ukulele with a warm tone and mahogany construction, ideal for casual play.",
+    "category": "Ukuleles",
+    "rating": 4.8,
+    "images": ["/images/products/17.png", "/images/products/18.png"],
+    "specs": {
+      "material": "Mahogany",
+      "dimensions": "21 x 7 x 2.5 inches",
+      "colorOptions": ["Natural"]
+    },
+    "slug": "kala-ka15s-ukulele",
+    "sku": "KALA-KA15S",
+    "inStock": true
+  },
+  {
+    "id": "10",
+    "name": "Boss RC-5 Loop Station",
+    "price": 219.99,
+    "description": "Advanced looper pedal with 13 hours of stereo recording, rhythm tracks, and USB audio.",
+    "category": "Effects & Pedals",
+    "rating": 4.9,
+    "images": ["/images/products/19.png", "/images/products/20.png"],
+    "specs": {
+      "material": "Metal chassis",
+      "dimensions": "2.9 x 5.1 x 2.3 inches",
+      "colorOptions": ["Red"]
+    },
+    "slug": "boss-rc5-loop-station",
+    "sku": "BOSS-RC5",
+    "inStock": true
+  },
+  {
+    "id": "11",
+    "name": "Taylor GS Mini Acoustic Guitar",
+    "price": 599.00,
+    "description": "Popular compact guitar with a rich tone and layered wood body, perfect for travel and small hands.",
+    "category": "Acoustic Guitars",
+    "rating": 4.9,
+    "images": ["/images/products/21.png", "/images/products/22.png"],
+    "specs": {
+      "material": "Spruce top, Sapele back",
+      "dimensions": "36 x 14.5 x 4 inches",
+      "colorOptions": ["Natural", "Mahogany"]
+    },
+    "slug": "taylor-gs-mini",
+    "sku": "TAY-GSMINI",
+    "inStock": true
+  },
+  {
+    "id": "12",
+    "name": "Novation Launchpad Mini",
+    "price": 109.00,
+    "description": "Compact MIDI grid controller designed for finger drumming, clip launching, and Ableton Live.",
+    "category": "Controllers",
+    "rating": 4.4,
+    "images": ["/images/products/23.png", "/images/products/24.png"],
+    "specs": {
+      "material": "Plastic",
+      "dimensions": "7.1 x 7.1 x 1 inches",
+      "colorOptions": ["Black"]
+    },
+    "slug": "novation-launchpad-mini",
+    "sku": "NOV-LAUNCH-MINI",
+    "inStock": true
+  },
+  {
+    "id": "13",
+    "name": "Arturia MiniLab MkII",
+    "price": 129.00,
+    "description": "Compact MIDI controller with velocity-sensitive keys and rotary knobs for studio and live performance.",
+    "category": "Controllers",
+    "rating": 4.6,
+    "images": ["/images/products/25.png", "/images/products/26.png"],
+    "specs": {
+      "material": "Plastic",
+      "dimensions": "14 x 8.7 x 1.6 inches",
+      "colorOptions": ["White", "Black"]
+    },
+    "slug": "arturia-minilab-mkii",
+    "sku": "ART-MINILAB-2",
+    "inStock": true
+  },
+  {
+    "id": "14",
+    "name": "Zildjian K Custom Dark Ride",
+    "price": 419.95,
+    "description": "20-inch dark ride cymbal with rich overtones, great stick definition and subtle wash.",
+    "category": "Cymbals",
+    "rating": 4.8,
+    "images": ["/images/products/27.png", "/images/products/28.png"],
+    "specs": {
+      "material": "Cast Bronze",
+      "dimensions": "20 inch diameter",
+      "colorOptions": ["Bronze"]
+    },
+    "slug": "zildjian-k-custom-dark-ride",
+    "sku": "ZIL-KC-DR20",
+    "inStock": true
+  },
+  {
+    "id": "15",
+    "name": "Shure SM58 Microphone",
+    "price": 99.00,
+    "description": "Industry-standard dynamic microphone for vocals and live performances with built-in pop filter.",
+    "category": "Microphones",
+    "rating": 4.9,
+    "images": ["/images/products/29.png", "/images/products/30.png"],
+    "specs": {
+      "material": "Metal",
+      "dimensions": "6.3 x 2 x 2 inches",
+      "colorOptions": ["Black"]
+    },
+    "slug": "shure-sm58-microphone",
+    "sku": "SHURE-SM58",
     "inStock": true
   }
 ]

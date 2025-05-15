@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { CartProvider } from '@/contexts/CartContext';
-import Header from '@/components/ui/Header';
+import { CartProvider } from "@/contexts/CartContext";
+import Header from "@/components/ui/Header";
 import { Geist, Geist_Mono } from "next/font/google";
+import { WishlistProvider } from "@/contexts/WishlistContext";
+import { ReviewProvider } from "@/contexts/ReviewContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
- title: 'Music Instruments Store',
-  description: 'Premium musical instruments marketplace',
+  title: "Music Instruments Store",
+  description: "Premium musical instruments marketplace",
 };
 
 export default function RootLayout({
@@ -30,10 +32,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <CartProvider>
-            <Header />
-            {children}
+          <WishlistProvider>
+            <ReviewProvider>
+              <Header />
+              {children}
+            </ReviewProvider>
+          </WishlistProvider>
         </CartProvider>
-        
       </body>
     </html>
   );
