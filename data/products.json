@@ -1,54 +1,155 @@
 [
   {
     "id": "1",
-    "name": "Yamaha Pacifica 112V",
-    "price": 299.99,
-    "description": "A versatile electric guitar with smooth playability and excellent tonal range for beginners and intermediate players.",
-    "category": "Guitars",
-    "rating": 4.5,
-    "images": ["/images/products/01.png", "/images/products/02.png"],
+    "name": "Yamaha YSL-354 Trombone",
+    "price": 899.99,
+    "description": "Professional tenor trombone with smooth slide action and rich tonal projection for advanced players.",
+    "category": "Brass",
+    "rating": 4.7,
+    "images": ["/images/products/trombone-01.png", "/images/products/trombone-02.png"],
     "specs": {
-      "material": "Alder body, Maple neck",
-      "dimensions": "38.6 x 12.8 x 2.2 inches",
-      "colorOptions": ["Red Metallic", "Natural", "Black"]
+      "material": "Yellow brass",
+      "dimensions": "27.5 inches (bell diameter 8.5\")",
+      "colorOptions": ["Gold lacquer", "Silver plate"]
     },
-    "slug": "yamaha-pacifica-112v",
-    "sku": "YAM-PAC-112V",
+    "slug": "yamaha-ysl-354-trombone",
+    "sku": "YAM-TRB-354",
     "inStock": true
   },
   {
     "id": "2",
-    "name": "Stentor Student I Violin",
-    "price": 149.99,
-    "description": "An affordable and reliable violin for beginners with quality tonewoods and a warm, full sound.",
-    "category": "Violins",
-    "rating": 4.4,
-    "images": ["/images/products/02.png", "/images/products/03.png"],
+    "name": "Stentor Student Violin",
+    "price": 199.99,
+    "description": "4/4 full-size violin with spruce top and maple back, perfect for beginning musicians.",
+    "category": "Strings",
+    "rating": 4.3,
+    "images": ["/images/products/violin-01.png", "/images/products/violin-02.png"],
     "specs": {
-      "material": "Solid Carved Spruce Top, Maple Back and Sides",
-      "dimensions": "23.5 x 8.25 x 3.5 inches",
-      "colorOptions": ["Natural Varnish"]
+      "material": "Spruce/maple",
+      "dimensions": "23.5 inch body length",
+      "colorOptions": ["Natural wood", "Amber varnish"]
     },
-    "slug": "stentor-student-i-violin",
-    "sku": "STE-STU-I",
+    "slug": "stentor-student-violin",
+    "sku": "STN-VLN-101",
     "inStock": true
   },
-
+  {
+    "id": "3",
+    "name": "Lyon & Healy Troubadour Harp",
+    "price": 4299.99,
+    "description": "Concert pedal harp with 34 strings and stunning resonance for professional harpists.",
+    "category": "Folk",
+    "rating": 4.9,
+    "images": ["/images/products/harp-01.png", "/images/products/harp-02.png"],
+    "specs": {
+      "material": "Maple wood",
+      "dimensions": "74\" height x 36\" width",
+      "colorOptions": ["Natural maple", "Ebony finish"]
+    },
+    "slug": "lyon-healy-troubadour-harp",
+    "sku": "LYN-HRP-034",
+    "inStock": false
+  },
   {
     "id": "4",
-    "name": "Mapex Saturn V Drum Set",
-    "price": 1099.99,
-    "description": "A modern 4-string electric bass with active electronics and smooth neck for funk, rock, and jazz basslines.",
-    "category": "Drums",
-    "rating": 4.6,
-    "images": ["/images/products/04.png", "/images/products/05.png"],
+    "name": "Zildjian A Custom Cymbal",
+    "price": 349.99,
+    "description": "18\" brilliant finish crash cymbal with explosive projection and musical decay.",
+    "category": "Percussion",
+    "rating": 4.8,
+    "images": ["/images/products/cymbal-01.png", "/images/products/cymbal-02.png"],
     "specs": {
-      "material": "Maple/Walnut Hybrid Shell",
-      "dimensions": "22' x 18' Bass, 10'/12'/16' Toms",
-      "colorOptions": ["Transparent Black", "Crimson Red"]
+      "material": "B20 bronze alloy",
+      "dimensions": "18\" diameter",
+      "colorOptions": ["Brilliant finish", "Traditional finish"]
     },
-    "slug": "mapex-saturn-v-drum-set",
-    "sku": "MAP-SATURN-V",
-    "inStock": false
+    "slug": "zildjian-a-custom-cymbal",
+    "sku": "ZIL-CYM-18AC",
+    "inStock": true
+  },
+  {
+    "id": "5",
+    "name": "Pearl Quantz Flute",
+    "price": 1299.99,
+    "description": "Solid silver headjoint flute with French-style arms for superior tonal control.",
+    "category": "Woodwind",
+    "rating": 4.6,
+    "images": ["/images/products/flute-01.png", "/images/products/flute-02.png"],
+    "specs": {
+      "material": "Nickel silver",
+      "dimensions": "26.5 inches",
+      "colorOptions": ["Silver plate", "Gold plate"]
+    },
+    "slug": "pearl-quantz-flute",
+    "sku": "PRL-FLT-202",
+    "inStock": true
+  },
+  {
+    "id": "6",
+    "name": "Remo Fiberskyn Tambourine",
+    "price": 49.99,
+    "description": "Professional tambourine with natural Fiberskyn head and jingle precision.",
+    "category": "Percussion",
+    "rating": 4.4,
+    "images": ["/images/products/tambourine-01.png", "/images/products/tambourine-02.png"],
+    "specs": {
+      "material": "Mappa wood/Fiberskyn",
+      "dimensions": "10\" diameter",
+      "colorOptions": ["Natural", "Black"]
+    },
+    "slug": "remo-fiberskyn-tambourine",
+    "sku": "REM-TAM-10F",
+    "inStock": true
+  },
+  {
+    "id": "7",
+    "name": "Adams Academy Xylophone",
+    "price": 1899.99,
+    "description": "Concert xylophone with rosewood bars and resonator tubes for bright articulation.",
+    "category": "Percussion",
+    "rating": 4.7,
+    "images": ["/images/products/xylophone-01.png", "/images/products/xylophone-02.png"],
+    "specs": {
+      "material": "Rosewood/aluminum",
+      "dimensions": "45\" wide x 32\" high",
+      "colorOptions": ["Natural wood", "Black finish"]
+    },
+    "slug": "adams-academy-xylophone",
+    "sku": "ADM-XYL-3OCT",
+    "inStock": true
+  },
+  {
+    "id": "8",
+    "name": "Latin Percussion Matador Maracas",
+    "price": 29.99,
+    "description": "Authentic Cuban-style maracas with natural gourd construction for vibrant shaker sounds.",
+    "category": "Percussion",
+    "rating": 4.2,
+    "images": ["/images/products/maracas-01.png", "/images/products/maracas-02.png"],
+    "specs": {
+      "material": "Natural gourd",
+      "dimensions": "8\" length",
+      "colorOptions": ["Natural", "Painted design"]
+    },
+    "slug": "lp-matador-maracas",
+    "sku": "LPM-MRC-001",
+    "inStock": true
+  },
+  {
+    "id": "9",
+    "name": "McCallum Highland Bagpipes",
+    "price": 2499.99,
+    "description": "Professional Scottish bagpipes with African blackwood construction and silver fittings.",
+    "category": "Folk",
+    "rating": 4.8,
+    "images": ["/images/products/bagpipes-01.png", "/images/products/bagpipes-02.png"],
+    "specs": {
+      "material": "African blackwood",
+      "dimensions": "32\" drones",
+      "colorOptions": ["Traditional", "Silver-mounted"]
+    },
+    "slug": "mccallum-highland-bagpipes",
+    "sku": "MCC-BAG-PRO",
+    "inStock": true
   }
 ]

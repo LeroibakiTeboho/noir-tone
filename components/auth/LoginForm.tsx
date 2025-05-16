@@ -24,7 +24,7 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={formik.handleSubmit} className="space-y-6">
-      <div className="form-control">
+      <div className="form-control flex flex-col">
         <label className="label">
           <span className="label-text text-silver">Email</span>
         </label>
@@ -40,7 +40,7 @@ export default function LoginForm() {
         )}
       </div>
 
-      <div className="form-control">
+      <div className="form-control flex flex-col">
         <label className="label">
           <span className="label-text text-silver">Password</span>
         </label>
@@ -59,7 +59,7 @@ export default function LoginForm() {
       <button
         type="submit"
         disabled={formik.isSubmitting}
-        className="btn btn-primary w-full"
+        className="btn btn-primary"
       >
         Login
       </button>

@@ -134,43 +134,41 @@ export default function Header() {
               Orders
             </Link>
 
-              <div className="flex items-center gap-6">
-          {user ? (
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} className="btn btn-ghost">
-                <div className="avatar online">
-                  <div className="w-8 rounded-full">
-                    <img src={user.avatar || '/default-avatar.png'} />
+            <div className="flex items-center gap-6">
+              {user ? (
+                <div className="dropdown dropdown-end">
+                  <div tabIndex={0} className="btn btn-ghost">
+                    <div className="avatar online">
+                      <div className="w-8 rounded-full">
+                        <img src={user.avatar || "/default-avatar.png"} />
+                      </div>
+                    </div>
+                    <span className="ml-2 text-silver">{user.name}</span>
                   </div>
+                  <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>
+                      <Link href="/profile">Profile</Link>
+                    </li>
+                    <li>
+                      <button onClick={logout}>Logout</button>
+                    </li>
+                  </ul>
                 </div>
-                <span className="ml-2 text-silver">{user.name}</span>
-              </div>
-              <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                <li><Link href="/profile">Profile</Link></li>
-                <li><button onClick={logout}>Logout</button></li>
-              </ul>
+              ) : (
+                <>
+                  <Link href="/login" className="text-silver hover:text-gold">
+                    Login
+                  </Link>
+                  <Link
+                    href="/register"
+                    className="text-silver hover:text-gold"
+                  >
+                    Register
+                  </Link>
+                </>
+              )}
             </div>
-          ) : (
-            <>
-              <Link href="/login" className="text-silver hover:text-gold">
-                Login
-              </Link>
-              <Link href="/register" className="text-silver hover:text-gold">
-                Register
-              </Link>
-            </>
-          )}
-        </div>
           </div>
-
-
-
-
-
-
-
-
-
         </div>
 
         {/* Search Bar */}
@@ -208,6 +206,27 @@ export default function Header() {
               >
                 Orders
               </Link>
+              <Link
+                href="/blog"
+                className="block text-silver hover:text-gold"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
+                href="/artists"
+                className="block text-silver hover:text-gold"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Artists
+              </Link>
+              <Link
+                href="/contact"
+                className="block text-silver hover:text-gold"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
               <div className="pt-4 border-t border-base-100">
                 <Link
                   href="/cart"
@@ -229,53 +248,18 @@ export default function Header() {
           <Link href="/products" className="text-silver hover:text-gold">
             Shop
           </Link>
-          <Link
-            href="/products?category=guitars"
-            className="text-silver hover:text-gold"
-          >
-            Guitars
+
+          <Link href="/blog" className="text-silver hover:text-gold">
+            Blog
           </Link>
-          <Link
-            href="/products?category=keyboards"
-            className="text-silver hover:text-gold"
-          >
-            Keyboards
+          <Link href="/artists" className="text-silver hover:text-gold">
+            Artists
           </Link>
-          <Link
-            href="/products?category=drums"
-            className="text-silver hover:text-gold"
-          >
-            Drums
+
+          <Link href="/contact" className="text-silver hover:text-gold">
+            Contact
           </Link>
         </div>
-
-         {/* <div className="flex items-center gap-6">
-          {user ? (
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} className="btn btn-ghost">
-                <div className="avatar online">
-                  <div className="w-8 rounded-full">
-                    <img src={user.avatar || '/default-avatar.png'} />
-                  </div>
-                </div>
-                <span className="ml-2 text-silver">{user.name}</span>
-              </div>
-              <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                <li><Link href="/profile">Profile</Link></li>
-                <li><button onClick={logout}>Logout</button></li>
-              </ul>
-            </div>
-          ) : (
-            <>
-              <Link href="/login" className="text-silver hover:text-gold">
-                Login
-              </Link>
-              <Link href="/register" className="text-silver hover:text-gold">
-                Register
-              </Link>
-            </>
-          )}
-        </div> */}
       </nav>
     </header>
   );

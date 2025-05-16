@@ -6,6 +6,7 @@ import { WishlistProvider } from "@/contexts/WishlistContext";
 import { ReviewProvider } from "@/contexts/ReviewContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { PromotionsProvider } from "@/contexts/PromotionsContext";
+import { ContentProvider } from "@/contexts/ContentContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,18 +34,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
-        <PromotionsProvider>
-          <AuthProvider>
-            <CartProvider>
-              <WishlistProvider>
-                <ReviewProvider>
-                  <Header />
-                  {children}
-                </ReviewProvider>
-              </WishlistProvider>
-            </CartProvider>
-          </AuthProvider>
-        </PromotionsProvider>
+        <ContentProvider>
+          <PromotionsProvider>
+            <AuthProvider>
+              <CartProvider>
+                <WishlistProvider>
+                  <ReviewProvider>
+                    <Header />
+                    {children}
+                  </ReviewProvider>
+                </WishlistProvider>
+              </CartProvider>
+            </AuthProvider>
+          </PromotionsProvider>
+        </ContentProvider>
       </body>
     </html>
   );

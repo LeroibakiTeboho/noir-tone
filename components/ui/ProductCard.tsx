@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
-    <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow h-full">
+    <div className="card bg-base-100 shadow-2xl hover:shadow-3xl transition-shadow h-full">
       <div className="relative">
         <WishlistButton productId={product.id} />
         <figure className="px-4 pt-4">
