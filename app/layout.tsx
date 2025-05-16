@@ -4,6 +4,8 @@ import Header from "@/components/ui/Header";
 import { Geist, Geist_Mono } from "next/font/google";
 import { WishlistProvider } from "@/contexts/WishlistContext";
 import { ReviewProvider } from "@/contexts/ReviewContext";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { PromotionsProvider } from "@/contexts/PromotionsContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,14 +33,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
-        <CartProvider>
-          <WishlistProvider>
-            <ReviewProvider>
-              <Header />
-              {children}
-            </ReviewProvider>
-          </WishlistProvider>
-        </CartProvider>
+        <PromotionsProvider>
+          <AuthProvider>
+            <CartProvider>
+              <WishlistProvider>
+                <ReviewProvider>
+                  <Header />
+                  {children}
+                </ReviewProvider>
+              </WishlistProvider>
+            </CartProvider>
+          </AuthProvider>
+        </PromotionsProvider>
       </body>
     </html>
   );

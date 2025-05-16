@@ -1,5 +1,5 @@
 "use client";
-
+import { useAuth } from "@/contexts/AuthContext";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/contexts/CartContext";
@@ -9,6 +9,7 @@ import type { Product } from "@/types/product";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
+  const { user, logout } = useAuth();
   const [products, setProducts] = useState<Product[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { state } = useCart();
@@ -51,7 +52,10 @@ export default function Header() {
             </svg>
           </button>
           {/* Logo */}
-          <Link href="/" className="group relative flex items-center space-x-2 mr-4">
+          <Link
+            href="/"
+            className="group relative flex items-center space-x-2 mr-4"
+          >
             <svg
               className="w-12 h-12 text-gold transition-transform group-hover:rotate-[30deg]"
               viewBox="0 0 100 100"
@@ -129,7 +133,44 @@ export default function Header() {
             <Link href="/orders" className="text-silver hover:text-gold">
               Orders
             </Link>
+
+              <div className="flex items-center gap-6">
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} className="btn btn-ghost">
+                <div className="avatar online">
+                  <div className="w-8 rounded-full">
+                    <img src={user.avatar || '/default-avatar.png'} />
+                  </div>
+                </div>
+                <span className="ml-2 text-silver">{user.name}</span>
+              </div>
+              <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><Link href="/profile">Profile</Link></li>
+                <li><button onClick={logout}>Logout</button></li>
+              </ul>
+            </div>
+          ) : (
+            <>
+              <Link href="/login" className="text-silver hover:text-gold">
+                Login
+              </Link>
+              <Link href="/register" className="text-silver hover:text-gold">
+                Register
+              </Link>
+            </>
+          )}
+        </div>
           </div>
+
+
+
+
+
+
+
+
+
         </div>
 
         {/* Search Bar */}
@@ -183,8 +224,6 @@ export default function Header() {
           )}
         </AnimatePresence>
 
- 
-
         {/* Desktop Navigation */}
         <div className="hidden lg:flex justify-center mt-4 lg:mt-0 space-x-6">
           <Link href="/products" className="text-silver hover:text-gold">
@@ -209,6 +248,34 @@ export default function Header() {
             Drums
           </Link>
         </div>
+
+         {/* <div className="flex items-center gap-6">
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} className="btn btn-ghost">
+                <div className="avatar online">
+                  <div className="w-8 rounded-full">
+                    <img src={user.avatar || '/default-avatar.png'} />
+                  </div>
+                </div>
+                <span className="ml-2 text-silver">{user.name}</span>
+              </div>
+              <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><Link href="/profile">Profile</Link></li>
+                <li><button onClick={logout}>Logout</button></li>
+              </ul>
+            </div>
+          ) : (
+            <>
+              <Link href="/login" className="text-silver hover:text-gold">
+                Login
+              </Link>
+              <Link href="/register" className="text-silver hover:text-gold">
+                Register
+              </Link>
+            </>
+          )}
+        </div> */}
       </nav>
     </header>
   );
