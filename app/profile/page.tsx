@@ -23,7 +23,7 @@ export default function ProfilePage() {
     },
   });
 
-  if (!user) return <div>Please login to view profile</div>;
+  if (!user) return <div className='container mx-auto px-4 py-8'><h1 className="text-4xl font-bold text-gold mb-8" >Please login to view profile</h1></div>;
 
   return (
     <div className="container mx-auto px-4 py-8">

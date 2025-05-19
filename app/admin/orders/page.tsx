@@ -1,4 +1,3 @@
-// app/admin/orders/page.tsx
 "use client";
 
 import { useCart } from "@/contexts/CartContext";

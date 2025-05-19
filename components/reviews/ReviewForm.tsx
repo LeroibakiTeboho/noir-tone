@@ -127,28 +127,30 @@ export default function ReviewForm({ productId }: { productId: string }) {
           )}
         </div>
 
-        {/* Verified Purchase Checkbox */}
-        <label className="label cursor-pointer justify-start gap-2">
-          <input
-            type="checkbox"
-            name="verifiedPurchase"
-            className="checkbox checkbox-sm"
-            checked={formik.values.verifiedPurchase}
-            onChange={formik.handleChange}
-          />
-          <span className="label-text text-silver">
-            I purchased this product
-          </span>
-        </label>
+        <div className="flex flex-col gap-4">
+          {/* Verified Purchase Checkbox */}
+          <label className="label cursor-pointer justify-start gap-2">
+            <input
+              type="checkbox"
+              name="verifiedPurchase"
+              className="checkbox checkbox-sm"
+              checked={formik.values.verifiedPurchase}
+              onChange={formik.handleChange}
+            />
+            <span className="label-text text-silver">
+              I purchased this product
+            </span>
+          </label>
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          disabled={formik.isSubmitting}
-          className="btn btn-primary w-full"
-        >
-          Submit Review
-        </button>
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={formik.isSubmitting}
+            className="btn btn-primary w-fit"
+          >
+            Submit Review
+          </button>
+        </div>
       </form>
     </motion.div>
   );

@@ -4,6 +4,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useAuth } from '@/contexts/AuthContext';
+import { useRouter } from 'next/navigation';
 
 const loginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
@@ -12,6 +13,11 @@ const loginSchema = Yup.object().shape({
 
 export default function LoginForm() {
   const { login } = useAuth();
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/');
+  }
 
   const formik = useFormik({
     initialValues: { email: '', password: '' },
@@ -58,8 +64,9 @@ export default function LoginForm() {
 
       <button
         type="submit"
-        disabled={formik.isSubmitting}
+        disabled={formik.isSubmitting}        
         className="btn btn-primary"
+        onClick={handleClick}
       >
         Login
       </button>

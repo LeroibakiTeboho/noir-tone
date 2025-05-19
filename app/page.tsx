@@ -80,7 +80,7 @@ export default function Home() {
             ))}
         </div>
 
-        <section className="py-12">
+        {/* <section className="py-12">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-gold mb-8">
               Featured Artists
@@ -102,7 +102,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <Footer />
       </main>

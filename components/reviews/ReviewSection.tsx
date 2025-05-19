@@ -33,7 +33,7 @@ export default function ReviewSection({ productId }: { productId: string }) {
                   {new Date(review.date).toLocaleDateString()}
                 </span>
               </div>
-              <h3 className="font-bold text-gold mt-2">{review.title}</h3>
+              <h2 className="font-bold text-2xl text-gold mt-2">{review.title}</h2>
               <p className="text-silver">{review.comment}</p>
               {review.verifiedPurchase && (
                 <div className="badge badge-primary mt-2">

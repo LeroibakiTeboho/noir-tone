@@ -4,6 +4,7 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useAuth } from '@/contexts/AuthContext';
+import { useRouter } from 'next/navigation';
 
 const registerSchema = Yup.object().shape({
   name: Yup.string().required('Required'),
@@ -13,6 +14,11 @@ const registerSchema = Yup.object().shape({
 
 export default function RegisterForm() {
   const { register } = useAuth();
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/')
+  }
 
   const formik = useFormik({
     initialValues: { name: '', email: '', password: '' },
@@ -76,6 +82,7 @@ export default function RegisterForm() {
        <button
         type="submit"
         disabled={formik.isSubmitting}
+        onClick={handleClick}
         className="btn btn-primary"
       >
         Register

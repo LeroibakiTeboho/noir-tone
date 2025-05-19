@@ -1,11 +1,12 @@
 // components/content/BlogPostCard.tsx
 import Link from 'next/link';
+import type { BlogPost } from '@/types/blog';
 
 export default function BlogPostCard({ post }: { post: BlogPost }) {
   return (
     <div className="card bg-base-200 hover:shadow-xl transition-shadow">
       <div className="card-body">
-        <h3 className="card-title text-gold">{post.title}</h3>
+        <h3 className="card-title text-2xl text-gold">{post.title}</h3>
         <div className="flex items-center gap-4 text-silver">
           <span>{post.author}</span>
           <span>•</span>

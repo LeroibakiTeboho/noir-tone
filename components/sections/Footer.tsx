@@ -26,7 +26,7 @@ const SocialIcon = ({ network }: { network: string }) => {
 
 export default function Footer() {
   return (
-    <footer className="bg-base-300 border-t border-gold/20">
+    <footer className="bg-base-300 border-t border-gold/20 mt-10">
       <div className="container mx-auto px-4 py-12">
         <motion.div 
           initial={{ opacity: 0 }}

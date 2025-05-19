@@ -7,6 +7,7 @@ import { ReviewProvider } from "@/contexts/ReviewContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { PromotionsProvider } from "@/contexts/PromotionsContext";
 import { ContentProvider } from "@/contexts/ContentContext";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -42,6 +43,7 @@ export default function RootLayout({
                   <ReviewProvider>
                     <Header />
                     {children}
+                    <ThemeToggle />
                   </ReviewProvider>
                 </WishlistProvider>
               </CartProvider>

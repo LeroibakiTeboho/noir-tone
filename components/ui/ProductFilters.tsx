@@ -56,7 +56,7 @@ export default function ProductFilters({
                     : [...prev, category]
                 )}
               />
-              <span className="label-text">{category}</span>
+              <span className="label-text px-1">{category}</span>
             </label>
           ))}
         </div>
