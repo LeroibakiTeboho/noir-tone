@@ -1,8 +1,7 @@
-// app/checkout/success/page.tsx
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function OrderConfirmation() {
   return (
@@ -15,7 +14,8 @@ export default function OrderConfirmation() {
         <div className="text-6xl mb-4">🎉</div>
         <h1 className="text-4xl font-bold text-gold mb-4">Order Confirmed!</h1>
         <p className="text-silver mb-8">
-          Thank you for your purchase. We've sent a confirmation email with your order details.
+          Thank you for your purchase. We've sent a confirmation email with your
+          order details.
         </p>
         <div className="flex justify-center gap-4">
           <Link href="/products" className="btn btn-primary">
