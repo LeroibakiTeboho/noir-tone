@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
-    <div className="card bg-base-100 shadow-2xl hover:shadow-3xl transition-shadow h-full">
+    <div className="card bg-base-100 shadow-2xl hover:shadow-3xl transition-shadow h-fit">
       <div className="relative">
         <WishlistButton productId={product.id} />
         <figure className="px-4 pt-4">
@@ -19,8 +19,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
             src={product.images[0]}
             alt={product.name}
             width={400}
-            height={300}
-            className="rounded-xl h-48 object-cover"
+            height={400}
+            className="rounded-xl h-72 object-cover"
           />
         </figure>
       </div>
