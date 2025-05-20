@@ -26,7 +26,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </div>
       <div className="card-body">
         <h3 className="card-title text-gold">{product.name}</h3>
-        <div className="badge badge-secondary">${product.price}</div>
+        <div className="badge badge-secondary">R {product.price}</div>
         <p className="text-silver line-clamp-2">{product.description}</p>
         <div className="card-actions justify-end mt-4">
           <Link

@@ -1,7 +1,6 @@
 // components/sections/Footer.tsx
 'use client';
 
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const SocialIcon = ({ network }: { network: string }) => {

@@ -58,7 +58,7 @@ export default function ProductDetails({ product }: { product: Product }) {
 
         <div className="flex items-center gap-4">
           <div className="badge badge-secondary badge-lg text-xl">
-            ${product.price}
+            R {product.price}
           </div>
           <div className="flex items-center gap-1">
             <span className="text-gold text-xl">★</span>

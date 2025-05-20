@@ -11,7 +11,7 @@ const profileSchema = Yup.object().shape({
 });
 
 export default function ProfilePage() {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
 
   const formik = useFormik({
     initialValues: { name: user?.name || '', email: user?.email || '' },

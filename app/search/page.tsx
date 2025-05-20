@@ -1,7 +1,7 @@
 // app/search/page.tsx
 import ProductGrid from '@/components/ui/ProductGrid';
 import { getAllProducts } from '@/lib/products';
-import type { Product } from '@/types/product';
+
 
 export default async function SearchPage({
   searchParams,
@@ -20,7 +20,7 @@ export default async function SearchPage({
   return (
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold text-gold mb-8">
-        Search Results for "{searchQuery}"
+        Search Results for &quot;{searchQuery}&quot;
       </h1>
       <ProductGrid products={filteredProducts} />
     </main>

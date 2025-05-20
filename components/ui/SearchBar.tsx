@@ -1,17 +1,18 @@
 // components/ui/SearchBar.tsx
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import type { Product } from '@/types/product';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import type { Product } from "@/types/product";
+import Image from "next/image";
 
 export default function SearchBar({ products }: { products: Product[] }) {
   const router = useRouter();
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const filteredProducts = products.filter(product =>
+  const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(query.toLowerCase())
   );
 
@@ -32,7 +33,7 @@ export default function SearchBar({ products }: { products: Product[] }) {
         onFocus={() => setShowSuggestions(true)}
         onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
       />
-      
+
       <AnimatePresence>
         {showSuggestions && query && (
           <motion.div
@@ -41,7 +42,7 @@ export default function SearchBar({ products }: { products: Product[] }) {
             exit={{ opacity: 0 }}
             className="absolute top-14 w-full bg-base-200 shadow-lg z-50 rounded-box max-h-96 overflow-y-auto"
           >
-            {filteredProducts.slice(0, 5).map(product => (
+            {filteredProducts.slice(0, 5).map((product) => (
               <div
                 key={product.id}
                 className="p-4 hover:bg-base-300 cursor-pointer"
@@ -50,10 +51,12 @@ export default function SearchBar({ products }: { products: Product[] }) {
                 <div className="flex items-center gap-4">
                   <div className="avatar">
                     <div className="w-12 rounded">
-                      <img 
-                        src={product.images[0]} 
-                        alt={product.name} 
-                        className="object-cover"
+                      <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 object-cover"
                       />
                     </div>
                   </div>

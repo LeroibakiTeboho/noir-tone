@@ -18,7 +18,7 @@ export default function ProductFilters({
   products: Product[];
   onFilterChange: (filters: Filters) => void;
 }) {
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 100000]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [minRating, setMinRating] = useState(0);
 
@@ -76,8 +76,8 @@ export default function ProductFilters({
             className="range range-sm"
           />
           <div className="flex justify-between text-sm">
-            <span>$0</span>
-            <span>${priceRange[1]}</span>
+            <span>R 0</span>
+            <span>R {priceRange[1]}</span>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
-// components/checkout/OrderSummary.tsx
 "use client";
-
+import Image from "next/image";
 import { useCart } from "@/contexts/CartContext";
 import { motion } from "framer-motion";
 
@@ -36,7 +35,7 @@ const calculateInstrumentOrderTotal = (
   items: ContextCartItem[],
   promotions: Promotion[] = []
 ) => {
-  let subtotal = items.reduce(
+  const subtotal = items.reduce(
     (sum, item) => sum + item.product.price * item.quantity,
     0
   );
@@ -96,10 +95,12 @@ export default function OrderSummary() {
             <div className="flex items-center gap-4">
               <div className="avatar">
                 <div className="w-16 rounded-lg border border-gold/10">
-                  <img
+                  <Image
                     src={item.product.images[0]}
                     alt={item.product.name}
-                    className="group-hover:scale-105 transition-transform"
+                    width={64}
+                    height={64}                    
+                    className="group-hover:scale-105 transition-transform w-16 h-16 object-cover"
                   />
                 </div>
               </div>

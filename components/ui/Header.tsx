@@ -7,6 +7,7 @@ import SearchBar from "./SearchBar";
 import { getAllProducts } from "@/lib/products";
 import type { Product } from "@/types/product";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Header() {
   const { user, logout } = useAuth();
@@ -43,20 +44,34 @@ export default function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
               />
             </svg>
           </button>
 
           {/* Logo */}
-          <Link href="/" className="group relative flex items-center space-x-2 mr-4">
+          <Link
+            href="/"
+            className="group relative flex items-center space-x-2 mr-4"
+          >
             <svg
               className="w-12 h-12 text-gold transition-transform group-hover:rotate-[30deg]"
               viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="4" fill="none" />
+              <circle
+                cx="50"
+                cy="50"
+                r="48"
+                stroke="currentColor"
+                strokeWidth="4"
+                fill="none"
+              />
               <path
                 d="M35 60L35 30L65 30L65 45"
                 stroke="currentColor"
@@ -86,6 +101,10 @@ export default function Header() {
 
           {/* Desktop Icons */}
           <div className="hidden lg:flex items-center gap-6">
+            <Link href="/products" className="text-silver hover:text-gold">
+              Shop
+            </Link>
+
             <Link href="/wishlist" className="text-silver hover:text-gold">
               <svg className="h-6 w-6" fill="none" stroke="currentColor">
                 <path
@@ -110,20 +129,34 @@ export default function Header() {
               Orders
             </Link>
 
+            <Link href="/blog" className="text-silver hover:text-gold">
+              Blog
+            </Link>
+
             <div className="flex items-center gap-6">
               {user ? (
                 <div className="dropdown dropdown-end">
                   <div tabIndex={0} className="btn btn-ghost">
                     <div className="avatar online">
                       <div className="w-8 rounded-full">
-                        <img src={user.avatar || "images/user/user.png"} alt="User avatar" />
+                        <Image
+                          src={user.avatar || "/default-avatar.png"}
+                          alt="User avatar"
+                          width={32}
+                          height={32}
+                          className="w-8 h-8 rounded-full"
+                        />
                       </div>
                     </div>
                     <span className="ml-2 text-silver">{user.name}</span>
                   </div>
                   <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><Link href="/profile">Profile</Link></li>
-                    <li><button onClick={logout}>Logout</button></li>
+                    <li>
+                      <Link href="/profile">Profile</Link>
+                    </li>
+                    <li>
+                      <button onClick={logout}>Logout</button>
+                    </li>
                   </ul>
                 </div>
               ) : (
@@ -131,7 +164,10 @@ export default function Header() {
                   <Link href="/login" className="text-silver hover:text-gold">
                     Login
                   </Link>
-                  <Link href="/register" className="text-silver hover:text-gold">
+                  <Link
+                    href="/register"
+                    className="text-silver hover:text-gold"
+                  >
                     Register
                   </Link>
                 </>
@@ -146,22 +182,6 @@ export default function Header() {
             {/* Centered Search Bar */}
             <div className="w-full max-w-2xl">
               <SearchBar products={products} />
-            </div>
-
-            {/* Navigation Tabs */}
-            <div className="flex space-x-6">
-              <Link href="/products" className="text-silver hover:text-gold">
-                Shop
-              </Link>
-              <Link href="/blog" className="text-silver hover:text-gold">
-                Blog
-              </Link>
-              <Link href="/about" className="text-silver hover:text-gold">
-                About Us
-              </Link>
-              <Link href="/contact" className="text-silver hover:text-gold">
-                Contact
-              </Link>
             </div>
           </div>
         </div>
@@ -180,29 +200,94 @@ export default function Header() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden mt-4 space-y-4"
             >
-              <Link href="/products" className="block text-silver hover:text-gold" onClick={() => setIsMenuOpen(false)}>
+              <Link
+                href="/products"
+                className="block text-silver hover:text-gold"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Shop
               </Link>
-              <Link href="/wishlist" className="block text-silver hover:text-gold" onClick={() => setIsMenuOpen(false)}>
+              <Link
+                href="/wishlist"
+                className="block text-silver hover:text-gold"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Wishlist
               </Link>
-              <Link href="/orders" className="block text-silver hover:text-gold" onClick={() => setIsMenuOpen(false)}>
+              <Link
+                href="/orders"
+                className="block text-silver hover:text-gold"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Orders
               </Link>
-              <Link href="/blog" className="block text-silver hover:text-gold" onClick={() => setIsMenuOpen(false)}>
+              <Link
+                href="/blog"
+                className="block text-silver hover:text-gold"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Blog
               </Link>
-              <Link href="/artists" className="block text-silver hover:text-gold" onClick={() => setIsMenuOpen(false)}>
-                About Us
-              </Link>
-              <Link href="/contact" className="block text-silver hover:text-gold" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
+
               <div className="pt-4 border-t border-base-100">
-                <Link href="/cart" className="flex items-center gap-2 text-silver hover:text-gold" onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href="/cart"
+                  className="flex items-center gap-2 text-silver hover:text-gold"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   <span>Cart</span>
-                  <span className="badge badge-secondary">{state.items.length}</span>
+                  <span className="badge badge-secondary">
+                    {state.items.length}
+                  </span>
                 </Link>
+              </div>
+
+              <div className="flex items-center gap-6">
+                {user ? (
+                  <div className="dropdown dropdown-end">
+                    <div tabIndex={0} className="btn btn-ghost">
+                      <div className="avatar online">
+                        <div className="w-8 rounded-full">
+                          <img
+                            src={user.avatar || "images/user/user.png"}
+                            alt="User avatar"
+                          />
+                        </div>
+                      </div>
+                      <span className="ml-2 text-silver">{user.name}</span>
+                    </div>
+                    <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 left-0">
+                      <li>
+                        <Link
+                          href="/profile"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          Profile
+                        </Link>
+                      </li>
+                      <li>
+                        <button onClick={logout}>Logout</button>
+                      </li>
+                    </ul>
+                  </div>
+                ) : (
+                  <>
+                    <Link
+                      href="/login"
+                      className="block text-silver hover:text-gold"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      href="/register"
+                      className="block text-silver hover:text-gold"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Register
+                    </Link>
+                  </>
+                )}
               </div>
             </motion.div>
           )}

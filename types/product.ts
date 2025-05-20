@@ -15,5 +15,4 @@ export interface Product {
   slug: string;
   sku: string;
   inStock: boolean;
-  selectedVariant?: string; // Add optional variant field
 }

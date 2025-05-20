@@ -2,9 +2,6 @@
 import ProductCard from "@/components/ui/ProductCard";
 import products from "@/data/products.json";
 import AnimateWrapper from "@/components/ui/AnimateWrapper";
-import ArtistSpotlight from "@/components/content/ArtistSpotlight";
-import VideoDemoCard from "@/components/content/VideoDemoCard";
-// import HeroSection from "@/components/sections/HeroSection";
 import Footer from "@/components/sections/Footer";
 
 interface Artist {
@@ -22,41 +19,6 @@ interface VideoDemo {
   duration: string;
   url: string;
 }
-
-// Mock data directly in component
-const featuredArtists: Artist[] = [
-  {
-    id: "1",
-    name: "John Guitarist",
-    instrument: "Guitar",
-    image: "/images/artists/john.jpg",
-    bio: "Award-winning guitarist with 15 years experience...",
-  },
-  {
-    id: "2",
-    name: "Sarah Pianist",
-    instrument: "Piano",
-    image: "/images/artists/sarah.png",
-    bio: "Classically trained pianist with international accolades",
-  },
-];
-
-const videoDemos: VideoDemo[] = [
-  {
-    id: "v1",
-    title: "Beginner Guitar Lesson",
-    thumbnail: "/images/videos/jazz-guitar-lesson-thumb.jpg",
-    duration: "12:34",
-    url: "https://youtu.be/vIg1GxpxE6E",
-  },
-  {
-    id: "v2",
-    title: "Piano Maintenance Guide",
-    thumbnail: "/images/videos/piano-care.jpg",
-    duration: "08:45",
-    url: "https://youtu.be/vIg1GxpxE6E",
-  },
-];
 
 export default function Home() {
   return (

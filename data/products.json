@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Yamaha YSL-354 Trombone",
-    "price": 899.99,
+    "price": 16233.30,
     "description": "Professional tenor trombone with smooth slide action and rich tonal projection for advanced players.",
     "category": "Brass",
     "rating": 4.7,
@@ -19,7 +19,7 @@
   {
     "id": "2",
     "name": "Stentor Student Violin",
-    "price": 199.99,
+    "price": 3607.26,
     "description": "4/4 full-size violin with spruce top and maple back, perfect for beginning musicians.",
     "category": "Strings",
     "rating": 4.3,
@@ -36,7 +36,7 @@
   {
     "id": "3",
     "name": "Lyon & Healy Troubadour Harp",
-    "price": 4299.99,
+    "price": 77559.78,
     "description": "Concert pedal harp with 34 strings and stunning resonance for professional harpists.",
     "category": "Folk",
     "rating": 4.9,
@@ -53,7 +53,7 @@
   {
     "id": "4",
     "name": "Zildjian A Custom Cymbal",
-    "price": 349.99,
+    "price": 6312.84,
     "description": "18\" brilliant finish crash cymbal with explosive projection and musical decay.",
     "category": "Percussion",
     "rating": 4.8,
@@ -70,7 +70,7 @@
   {
     "id": "5",
     "name": "Pearl Quantz Flute",
-    "price": 1299.99,
+    "price": 23448.18,
     "description": "Solid silver headjoint flute with French-style arms for superior tonal control.",
     "category": "Woodwind",
     "rating": 4.6,
@@ -87,7 +87,7 @@
   {
     "id": "6",
     "name": "Remo Fiberskyn Tambourine",
-    "price": 49.99,
+    "price": 901.68,
     "description": "Professional tambourine with natural Fiberskyn head and jingle precision.",
     "category": "Percussion",
     "rating": 4.4,
@@ -104,7 +104,7 @@
   {
     "id": "7",
     "name": "Adams Academy Xylophone",
-    "price": 1899.99,
+    "price": 34270.50,
     "description": "Concert xylophone with rosewood bars and resonator tubes for bright articulation.",
     "category": "Percussion",
     "rating": 4.7,
@@ -121,7 +121,7 @@
   {
     "id": "8",
     "name": "Latin Percussion Matador Maracas",
-    "price": 29.99,
+    "price": 540.94,
     "description": "Authentic Cuban-style maracas with natural gourd construction for vibrant shaker sounds.",
     "category": "Percussion",
     "rating": 4.2,
@@ -138,7 +138,7 @@
   {
     "id": "9",
     "name": "McCallum Highland Bagpipes",
-    "price": 2499.99,
+    "price": 45092.82,
     "description": "Professional Scottish bagpipes with African blackwood construction and silver fittings.",
     "category": "Folk",
     "rating": 4.8,

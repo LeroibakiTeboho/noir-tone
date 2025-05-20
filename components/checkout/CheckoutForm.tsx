@@ -43,7 +43,7 @@ export default function CheckoutForm() {
         saveCard: false
       }}
       validationSchema={validationSchema}
-      onSubmit={(values) => {
+      onSubmit={() => {
         // Handle form submission
       }}
     >
